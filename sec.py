@@ -10,9 +10,7 @@ import socket
 import sys
 import time
 from datetime import datetime
-
-import psutisl  # type: ignore
-
+import psutil  
 
 def get_cpu_info():
     return {
@@ -85,7 +83,7 @@ def main():
         print(f"\n WARNINGS: {', '.join(warnings)}", file=sys.stderr)
         return 1
     else:
-        print("\ All systems healthy.", file=sys.stderr)
+        print("\ All Systems Has Been Checked .", file=sys.stderr)
         return 0
 
 

@@ -1,8 +1,8 @@
 # Use an older base image so Docker Scout has vulnerabilities to find
 FROM python:3.9-slim-bullseye
 
-LABEL org.opencontainers.image.source="https://github.com/YOUR_GITHUB_USERNAME/sys-health-scout"
-LABEL org.opencontainers.image.description="Lightweight system health monitoring tool"
+LABEL org.opencontainers.image.source="https://github.com/Andreaslmpr/SecOps2026"
+LABEL org.opencontainers.image.description="Security Scanning Tool - vulnerabilities detection"
 
 WORKDIR /app
 
@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txts
 
-COPY healthcheck.py .
+COPY sec.py .
 
-ENTRYPOINT ["python", "healthcheck.py"]
+ENTRYPOINT ["python", ""sec.py""]
