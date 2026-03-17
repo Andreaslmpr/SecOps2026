@@ -1,1 +1,1 @@
-https://github.com/YOUR_GITHUB_USERNAME/sys-health-scout/actions/runs/REPLACE_WITH_RUN_ID
+https://github.com/Andreaslmpr/SecOps2026/actions/runs/REPLACE_WITH_RUN_ID
