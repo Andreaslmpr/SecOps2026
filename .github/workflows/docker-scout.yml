@@ -1,5 +1,4 @@
 name: Docker Scout Vulnerability Scan
-
 on:
   push:
     branches: [main]
@@ -10,6 +9,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: andreaslmpr/secops2026
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true #because of the warning of Node js ,instea of waiting new update 
 
 jobs:
   build-and-scan:
