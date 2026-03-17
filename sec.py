@@ -47,6 +47,7 @@ def get_network_info():
     interfaces = {}
     for iface, addr_list in addrs.items():
         for addr in addr_list:
+            # Keep only IPv4 addresses 
             if addr.family == socket.AF_INET:
                 interfaces[iface] = addr.address
     return interfaces
@@ -85,6 +86,7 @@ def main():
 
     #Output status to standard error and set exit code
     if warnings:
+        #Prints to stderr to avoid corrupting the JSON output
         print(f"\n WARNINGS: {', '.join(warnings)}", file=sys.stderr)
         return 1
     else:
@@ -93,3 +95,9 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+
+'''INFO'''
+'''psutil: Rodola, G. psutil (Python system and process utilities) https://psutil.readthedocs.io/
+Python JSON Module: Python Software Foundation. json https://docs.python.org/3/library/json.html'''
