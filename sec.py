@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-SecOps: A system monitoring tool.
-Reports CPU, memory, disk, and network stats.
+SecOps: A system checking software.
+ memory, disk, and network stats  and reports.
 """
 
 import json
@@ -98,6 +98,6 @@ if __name__ == "__main__":
 
 
 
-'''INFO'''
+'''INFO FOR THE CODE SOURCE of sec.py'''
 '''psutil: Rodola, G. psutil (Python system and process utilities) https://psutil.readthedocs.io/
 Python JSON Module: Python Software Foundation. json https://docs.python.org/3/library/json.html'''
